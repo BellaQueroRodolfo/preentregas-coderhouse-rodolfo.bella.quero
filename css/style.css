@@ -1,3 +1,37 @@
+@-moz-keyframes my-animation {
+    from {
+        -moz-transform: translateY(100%);
+    }
+
+    to {
+        -moz-transform: translateY(-100%);
+    }
+}
+
+@-webkit-keyframes my-animation {
+    from {
+        -webkit-transform: translateY(100%);
+    }
+
+    to {
+        -webkit-transform: translateY(-100%);
+    }
+}
+
+@keyframes my-animation {
+    from {
+        -moz-transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+
+    to {
+        -moz-transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,48 +40,42 @@
 
 html {
     min-height: 100%;
-    background-color: #fbd773;
+    background-color: #b6a67fd5;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;    
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
+    height: 97vw;
+    margin: 0% auto;
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
+    width: 97vw;
+    height: 95%;
+    margin-right: 0%;
 }
 
-header{
+header {
     max-width: 100%;
     position: relative;
 }
 
-
 h1 {
-    color: rgb(156, 98, 98);
+    color: #6a865d;
     font-weight: bolder;
-    font-size: 4rem;
-    padding-top: 15px;
+    font-size: 2.7rem;
+    padding-top: 23px;
     margin-top: 5px;
     text-align: center;
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Bebas Neue", cursive;
     border: black 3px solid;
     border-radius: 20px;
     width: 200px;
-    height: 200px;
+    height: 230px;
     margin-left: 8px;
-    background-color: #d8c1948c;
+    background-color: #96ad7c8c;
     position: absolute;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
-
-
 
 main {
     margin: 0;
@@ -60,8 +88,8 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-row: 1fr;
-    width: 100vw;
-    height: 100vh background-size 100% 100%
+    width: 97vw;
+    background-size: 100%;
 }
 
 .windypic {
@@ -69,13 +97,11 @@ main {
     justify-self: auto;
     max-height: cover;
     margin: 0;
-
-
 }
 
 .haypic {
-    background-position: center;
-    justify-self: auto;
+    background-position: left;
+    justify-self: left;
     max-height: cover;
     max-width: cover;
     margin: 0;
@@ -84,65 +110,17 @@ main {
     display: inline-block;
     background-size: contain;
     background-size: cover;
-    border-top-right-radius: px;
     border-bottom-right-radius: 100%;
 }
 
-.haypiccontainer{
-    background-size: contain;
-    background-size: cover;
+.haypiccontainer {
+    background-size: auto;
+    background-size: auto;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .menu {
     justify-self: right;
-}
-
-/* Dropdown Button */
-.pantheonb { 
-    font-family: 'Bebas Neue', cursive;
-    color: black;
-    padding: 7px;
-    justify-self: auto;
-    font-size: 3rem;
-    border-radius: 20px;
-    background-color: transparent;
-}
-
-
-
-/* Dropdown Content (Hidden by Default) */
-.submenu {
-    display: none;
-    position: absolute;
-    background-color: transparent;
-    min-width: 169px;
-    border-color: black;
-    visibility: collapse;
-    border-radius: 50px;
-    border-width: 5px;
-    z-index: 1;
-
-}
-
-.submenu a {
-    color: #32657a ;
-    padding: 12px 16px;
-    text-decoration: none;
-    font-size: 1.5rem;
-    display: block;
-    font-weight: bolder;
-    opacity: 1;
-    border-radius: 20px;
-}
-
-.submenu a:hover {
-    color: rgb(190, 81, 30);
-    font-size: 2rem;
-    font-weight: bolder;
-    opacity: 1;
-    background-color: #e4b14a81;
-    transition-duration: 1s;
+    margin-right: 5px;
 }
 
 .menu:hover .submenu {
@@ -152,6 +130,15 @@ main {
     transition-duration: 1s;
 }
 
+.pantheonb {
+    font-family: "Bebas Neue", cursive;
+    color: black;
+    padding: 7px;
+    justify-self: auto;
+    font-size: 3rem;
+    border-radius: 20px;
+    background-color: transparent;
+}
 
 .pantheonb:hover {
     cursor: pointer;
@@ -160,11 +147,47 @@ main {
     transition-delay: 1s;
 }
 
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 169px;
+    border-style: none;
+    visibility: collapse;
+    border-radius: 50px;
+    border-width: 1px;
+}
+
+.submenu a {
+    color: #32657a;
+    background-color: khaki;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    font-weight: bolder;
+    opacity: 0.75;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #6d5d3e;
+    z-index: 1000;
+}
+
+.submenu a:hover {
+    color: #be511e;
+    font-size: 2rem;
+    font-weight: bolder;
+    opacity: 1;
+    background-color: #e4b14a81;
+    transition-duration: 1s;
+    z-index: 1000;
+}
+
 p {
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Bebas Neue", cursive;
     white-space: pre;
     font-size: 1.6rem;
-    text-align: left;
+    text-align: center auto;
     text-indent: 0%;
     white-space: pre;
     opacity: 0.2;
@@ -173,25 +196,123 @@ p {
 p:hover {
     transition: all 4s ease;
     opacity: 1;
-    color: #234452 ;
-
+    color: #234452;
 }
 
+.gridmission {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+    justify-content: left;
+    justify-self: left;
+    margin-left: 50px;
+}
+
+.picsbioindex {
+    border-radius: 25px;
+    border-style: solid;
+    max-width: 230px;
+    min-height: 230px;
+    justify-self: left;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.picsbio {
+    border-radius: 120px;
+    border-style: solid;
+    max-width: 230px;
+    min-height: 230px;
+    justify-self: left;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.picaura {
+    border-radius: 120px;
+    border-style: solid;
+    max-width: 230px;
+    min-height: 238px;
+    justify-self: left;
+    float: left;
+    margin-top: 10px;
+}
+
+.sectiont {
+    font-family: "Bebas Neue", cursive;
+    font-weight: bolder;
+    color: #6d5d3e;
+    font-size: xx-large;
+    text-decoration: overline;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.intearctivepic {
+    width: 890px;
+    height: 198px;
+    margin-top: 15px;
+    margin-left: 60px;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.youtube {
+    width: 890px;
+    height: 235px;
+    margin-top: 5px;
+    margin-left: 60px;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.tubemap {
+    height: 150px;
+    width: 150px;
+    border-style: solid;
+    border-radius: 50px;
+    margin-left: 40px;
+    margin-bottom: 35px;
+}
 
 footer {
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Bebas Neue", cursive;
     font-size: large;
-    background-color: rgba(220, 220, 220, 0.575);
+    background-color: rgba(220, 220, 220, 0.37);
     background-repeat: no-repeat;
-
-    padding-top: 15px;
-    padding-bottom: 30px;
-    color: gray
+    color: gray;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    height: 60px;
+    display: flex;
 }
 
-h3 {
-    opacity: 0.5;
-    padding: 10px;
+#scroll-container {
+    margin-top: 0%;
+    margin-left: 220px;
+    margin-right: 7px;
+    margin-bottom: 3px;
+    border: 1px solid black;
+    border-radius: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 50px;
+}
+
+#scroll-text {
+    height: 100%;
+    text-align: center;
+    color: #122d38;
+    font-family: "Bebas Neue", cursive;
+    font-size: 25px;
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
 }
 
 h3:hover {
@@ -199,13 +320,22 @@ h3:hover {
 }
 
 .worshipop {
-    padding-top: .5%;
+    padding: 5px;
     display: flex;
+    position: absolute;
+    left: 0%;
+}
+
+.redes {
+    padding: 5px;
+    display: flex;
+    right: 0%;
+    position: absolute;
 }
 
 .iconitos {
-    width: 70px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     opacity: 0.4;
     background-color: #a83f17;
     padding: 7px;
@@ -214,114 +344,425 @@ h3:hover {
 }
 
 .iconitos:hover {
-    opacity: 0.8
+    opacity: 0.8;
+}
+
+.elevatoricon {
+    width: 5%;
+    height: 50px;
+    opacity: 1;
+    padding-top: 5px;
+    border-radius: 9px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.iconitosr {
+    width: 55px;
+    height: 55px;
+    opacity: 0.4;
+    padding: 7px;
+    border-radius: 20px;
+    margin-left: 5px;
+}
+
+.iconitosr:hover {
+    opacity: 0.8;
+}
+
+#gallery {
+    max-width: 100%;
+    line-height: 0;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 1px;
+    -moz-column-count: 4;
+    -moz-column-gap: 5px;
+    column-count: 4;
+    column-gap: 5px;
+}
+
+#gallery img {
+    width: 100% !important;
+    height: auto !important;
+    margin: bottom 5px;
+    border-radius: 15px;
+    border-style: solid;
+    margin: 5px;
+    border-color: rgba(138, 116, 91, 0.479);
+    filter: grayscale(100%);
+}
+
+#gallery img:hover {
+    filter: none;
+    transition: filter 1.5s;
 }
 
 
-
-@media screen and (max-width: 480px) {
-    body{
-        display: flex;
-        display: inline-block;
-        max-height: 598px;
-        max-width: 475px;
-        }
-    .header {
-        overflow: hidden;
-
-        }
-    .haypic{
-        display: none;
+@media (max-width:640px) { 
+    
+    html {
+        background-color: #b6a67fd5; 
     }
+    
+    body {
 
-    .menu{
+    }
+    
+    header{
+        position: left;
+    }
+    
+    
+    h1 {
+        color: rgb(106, 134, 93);
+        font-weight: bolder;
+        font-size: 1.3rem;
+        padding-top: 2px;
+        margin-top: 5px;
+        text-align: center;
+        padding-left: 3px;
+        padding-bottom: 0;
+        font-family: 'Bebas Neue', cursive;
+        border: black 3px solid;
+        border-radius: 20px;
+        width: 200px;
+        height: 35px;
+        margin-left: 8px;
+        background-color: #96ad7c8c;
+        position: absolute;
+        text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    }
+    
+    
+    
+    main {
+        max-height: 630px;
+        max-width: 360px;
+        border: none;
+        font-size: 1.5rem;
+        text-align: left;
+        margin: 0;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    
+    
+    .haypic {
+        background-position: left;
         justify-self: left;
-        margin-left: 10px;
-        margin-top: 60px;
-        }
-
-    h1{
-        width: 440px;
-        height: 50px;
-        text-align: center;  
-        padding-top: 1px; 
-        padding-bottom: 1px;
-        font-size: 40px;
+        max-height: 100%;
+        margin: 0;
+        max-width: 330px;
     }
 
-    .pantheonb{
-        justify-content: left;
-    }
+    
+    
+    
+    .menu {
+        justify-self: left;
 
-    p{
+    }
+    
+    
+    .pantheonb { 
+        font-family: 'Bebas Neue', cursive;
+        color: black;
+        padding: 1px;
+        justify-self: left;
+        font-size: 1.5rem;
+        border-radius: 15px;
+        background-color: transparent;
+    }
+    
+    
+    
+    
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: transparent;
+        border-style: none;
+        visibility: collapse;
+        border-radius: 50px;
+        border-width: 1px;
+    }
+    
+    .submenu a {
+        color: #32657a ;
+        background-color: khaki;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        display: block;
+        font-weight: small;
+        font-size: 1rem;
+        opacity: 0.75;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #6d5d3e;
+        width: 83px;
+        height: 40px;
+    }
+    
+    .submenu a:hover {
+        color: rgb(190, 81, 30);
+        font-size: 2rem;
+        font-weight: bolder;
         opacity: 1;
-        margin: 0;
+        background-color: #e4b14a81;
+        transition-duration: 1s;
+    }
+    
+    .menu:hover .submenu {
+        display: block;
+        text-align: center;
+        visibility: visible;
+        transition-duration: 1s;
+    }
+    
+    
+    .pantheonb:hover {
+        cursor: pointer;
+        background-color: #e4b04a;
+        color: black;
+        transition-delay: 1s;
+    }
+    
+    p {
+        margin-left: -20px;
+        font-size: 32%;
+        margin-top: 1px;
+    }
+    
+    
+    .gridmission{
+        justify-content: left;
+        justify-self: left;
+        margin-left: 3px;
+        margin-top: 3px;
+    }
+
+    .subgridbody{
+        display: grid;
+        margin-bottom: 15px;
+        margin-top: 3px;
+
+    }
+    
+    .picsbioindex{
+            border-radius: 25px;
+            border-style: solid;
+            width: 200px;
+            justify-self: left;
+            float: left;
+            margin-left: 3px;
+            padding: 0;
+            display: grid;
+        }
+    
+    .tubemap{
+        border-radius: 100px;
+        margin-left: 5px;
+        height: 50px;
+        width: 70px;
+    }
+    
+    .picsbio{
+        border-radius: 120px;
+        border-style: solid;
+        height: 50px;
+        width: 150px;
+        justify-self: left;
+        float: left;
+        margin-left: 3px;
+        padding: 0;
+        display: grid;
+    
+    }
+    
+    .picaura{
+        border-radius: 120px;
+        border-style: solid;
+        width: 50px;
+        height: 50px;
+        justify-self: left;
+        float: left;
+        margin-left: 3px;
+        padding: 0;
+    }
+    
+    .sectiont{
+        font-family: 'Bebas Neue', cursive;
+        font-weight: bolder;
+        color: #6d5d3e;
+        font-size: small;
+        text-decoration: overline;
         text-align: left;
-        font-size: 18px;
-        margin-left: -25px;
-        text-align: start;
-        margin-top: -40px;
-        margin-bottom: -50px;
-        background-color: #fbd773;
+        display: grid;
+        margin-top: 2px;
+        margin-left: 5px;
+
 
     }
-
-    .mantradg{
-        margin-left: 0%;
-        padding-left: 0%;
+    
+    .intearctivepic{
+        width: 330px; 
+        height: 150px;
+        border-radius: 20px;
+        border-style: solid;
+        margin-left: 10px;
+        margin-top: -30px;
+        margin-bottom: 15px;
     }
-        
-    main{
-        padding-left: 0%;
-        margin-left: 0%;
-        padding-left: 0%;
-        flex: 300px;
-        background-color: #CAD5CA;
+    
+    .youtube{
+        width: 330px; 
+        height: 150px;
+        margin-top: -30px;
+        margin-left: 10px;
+        border-radius: 20px;
+        border-style: solid;
+        margin-bottom: 60px;
     }
-
-    html{
-        margin-left: 0%;
-        padding-left: 0%;
-        background-image: none;
-        max-height: 590px;
+    
+    
+    
+    footer {
+        font-family: 'Bebas Neue', cursive;
+        font-size: large;
+        background-color: rgba(220, 220, 220, 0.37);
+        background-repeat: no-repeat;
+        color: gray;
+        position: fixed;
+        bottom: 0%;
+        left: 0%;
+        right: 0%;
+        height: 65px;
+        display: grid;
     }
-    footer{
-        padding: 5px;
-    }
-}
-
-
-
-
-
-
-@media (min-width:480px) and (max-width:769px) {
-    .header {
+    
+    
+    
+    #scroll-container {
+        margin-top: 3px;
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-bottom: 3px;
+        border: 1px solid black;
+        border-radius: 30px;
+        border-radius: 5px;
         overflow: hidden;
-        flex-direction: column;
+        height: 30px;
     }
     
-    p{
-        margin: 0;
-        text-align: left;
-        font-size: 20px;
-        margin-left: -25px;
-        text-align: start;
-        margin-top: -70px;
-        margin-bottom: -30px;
-        background-color: #fbd773;
-        height: 320px;
+    #scroll-text {
+        height: 10px
+        text-align: center;
+        color: #122d38;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.5rem;
+        
+
+        -moz-transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        
+        -moz-animation: my-animation 15s linear infinite;
+        -webkit-animation: my-animation 15s linear infinite;
+        animation: my-animation 15s linear infinite;
     }
     
-    main{
-        height: 300px;
+
+    @-webkit-keyframes my-animation {
+        from { -webkit-transform: translateY(100%); }
+        to { -webkit-transform: translateY(-100%); }
     }
+    
+    @keyframes my-animation {
+        from {
+        -moz-transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        }
+        to {
+        -moz-transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        }
+    }
+    
+    h3:hover {
+        opacity: 0.8;
+    }
+    
+    .worshipop {
+        display: flex;
+        position: absolute;
+        left: 0%;
+    }
+    
+    .redes {
+        position: relative;
+        margin-left: 3px;
+    }
+    
+    
+    .iconitos {
+        width: 22px;
+        height: 30px;
+        opacity: 0.52;
+        background-color: #a83f17;
+        border-radius: 9px;
+    }
+    
+    .elevatoricon{
+        width: 20px;
+        height: 30px;
+        opacity: 1;   
+        padding-top: 4px;
+        border-radius: 9px; 
+        display: flex;
+        margin-left: 145px; 
+    }
+    
+    .iconitosr{
+        width: 30px;
+        height: 30px;
+        opacity: 0.52;
+        padding: 1px;
+        border-radius: 20px;
+    }
+    
+    .iconitos:hover,
+    .iconitosr:hover {
+        opacity: 0.8
+    }
+    
+    #gallery {
+        max-width: 100%;
+        line-height: 0;
+        -webkit-column-count: 4; 
+        -webkit-column-gap: 1px; 
+        -moz-column-count:4;
+        -moz-column-gap: 5px;
+        column-count: 4;
+        column-gap: 5px;
+    }
+    
+    #gallery img {
+        width: 100% !important;
+        height: auto !important;
+        margin: bottom 5px; 
+        border-radius: 15px;
+        border-style: solid;
+        margin: 5px;
+        border-color: rgba(138, 116, 91, 0.479);
+        filter: grayscale(100%);
+    }
+    
+    #gallery img:hover{
+        filter:none;
+        transition: filter 1.5s;
+    }
+
 }
-
-
-
-    
-
-
-
-
