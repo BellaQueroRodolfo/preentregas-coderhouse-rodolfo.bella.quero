@@ -765,6 +765,7 @@ h3:hover {
         margin: 5px;
         border-color: rgba(138, 116, 91, 0.479);
         filter: grayscale(100%);
+        z-index: 1;
     }
     
     #gallery img:hover{

@@ -154,6 +154,7 @@ main {
 		background-color: $background-color_6;
 		color: $color_2;
 		transition-delay: 1s;
+		z-index: 90;
 	}
 }
 .submenu {
@@ -177,7 +178,7 @@ main {
 		border-radius: 20px;
 		border-style: solid;
 		border-color: $border-color_1;
-		z-index: 1000;
+		z-index: 90;
 		&:hover {
 			color: $color_4;
 			font-size: 2rem;
@@ -185,7 +186,7 @@ main {
 			opacity: 1;
 			background-color: $background-color_5;
 			transition-duration: 1s;
-			z-index: 1;
+			z-index: 90;
 		}
 	}
 }
