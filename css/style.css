@@ -398,15 +398,13 @@ h3:hover {
 }
 
 
+
 @media (max-width:640px) { 
     
     html {
         background-color: #b6a67fd5; 
     }
     
-    body {
-
-    }
     
     header{
         position: left;
@@ -656,7 +654,7 @@ h3:hover {
     }
     
     #scroll-text {
-        height: 10px
+        height: 10px;
         text-align: center;
         color: #122d38;
         font-family: 'Bebas Neue', cursive;

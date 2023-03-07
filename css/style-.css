@@ -414,9 +414,6 @@ h3:hover {
         background-color: #b6a67fd5; 
     }
     
-    body {
-
-    }
     
     header{
         position: left;
@@ -469,7 +466,7 @@ h3:hover {
     
     
     .menu {
-        justify-self: left;
+        justify-self: center;
 
     }
     
@@ -478,7 +475,7 @@ h3:hover {
         font-family: 'Bebas Neue', cursive;
         color: black;
         padding: 1px;
-        justify-self: left;
+        justify-self: center;
         font-size: 1.5rem;
         border-radius: 15px;
         background-color: transparent;
@@ -666,7 +663,7 @@ h3:hover {
     }
     
     #scroll-text {
-        height: 10px
+        height: 10px;
         text-align: center;
         color: #122d38;
         font-family: 'Bebas Neue', cursive;
